@@ -3,4 +3,5 @@ export interface RatingProps {
     title?: string
     theme: "primary" | "secondary"
     disabled?: boolean
+    size?: "small" | "medium" | "large"
 }
