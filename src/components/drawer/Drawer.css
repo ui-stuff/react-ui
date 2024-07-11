@@ -1,0 +1,41 @@
+.drawer {
+    background-color: white;
+    width: 100vw;
+    height: 100dvh;
+}
+
+.drawer-left {
+    position: absolute;
+    left: 0;
+}
+
+.drawer-right {
+    position: absolute;
+    right: 0;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0.5;
+    width: 100dvw;
+    height: 100dvh;
+}
+
+.close-button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .drawer {
+        width:300px;
+    }
+}
+
