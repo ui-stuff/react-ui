@@ -24,17 +24,23 @@ export default [
     ],
     plugins: [
       peerDepsExternal(),
-      resolve(),
+      resolve({
+        extensions: [".js", ".jsx", ".ts", ".tsx"],
+        skip: ["react", "react-dom"],
+      }),
       commonjs(),
-      typescript({ tsconfig: "./tsconfig.json" }),
-      postcss(),
+      typescript({
+        tsconfig: "./tsconfig.json",
+        exclude: ["**/*.test.tsx", "**/*.test.ts", "**/*.stories.ts"],
+      }),
+      postcss({ extensions: [".css"], inject: true, extract: false }),
       terser(),
     ],
     external: ["react", "react-dom"],
   },
   {
-    input: "src/index.ts",
-    output: [{ file: "dist/types.d.ts", format: "es" }],
+    input: "dist/esm/types/index.d.ts",
+    output: [{ file: "dist/types.d.ts", format: "esm" }],
     plugins: [dts.default()],
     external: [/\.css$/],
   },
