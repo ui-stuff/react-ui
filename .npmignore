@@ -1,7 +1,6 @@
 # dependencies
 /node_modules
-package.json
-package-lock.json
+
 
 # misc
 .DS_Store
@@ -18,5 +17,8 @@ src/
 .prettierrc
 babel.config.js
 jest.config.js
+LICENSE
+package.json
+package-lock.json
 rollup.config.js
 tsconfig.json
