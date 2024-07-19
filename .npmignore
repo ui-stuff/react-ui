@@ -1,0 +1,22 @@
+# dependencies
+/node_modules
+package.json
+package-lock.json
+
+# misc
+.DS_Store
+.idea/
+
+src/
+
+.git
+.storybook
+.eslintignore
+.eslintrc
+.gitignore
+.prettierignore
+.prettierrc
+babel.config.js
+jest.config.js
+rollup.config.js
+tsconfig.json
